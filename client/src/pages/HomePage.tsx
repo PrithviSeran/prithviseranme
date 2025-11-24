@@ -1,5 +1,6 @@
 import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { SiGooglescholar } from "react-icons/si";
+import { BentoBox } from "@/components/BentoBox";
 
 export default function HomePage() {
   return (
@@ -8,7 +9,7 @@ export default function HomePage() {
         <h1 className="text-4xl font-bold mb-2" data-testid="text-name">
           Your Name
         </h1>
-        <div className="flex items-center gap-4 mt-4">
+        <div className="flex items-center gap-4 mt-4 mb-8">
           <a
             href="mailto:your.email@example.com"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -53,6 +54,8 @@ export default function HomePage() {
             <Linkedin className="h-5 w-5" />
           </a>
         </div>
+        
+        <BentoBox />
       </div>
 
       <div className="prose prose-neutral dark:prose-invert max-w-none">
