@@ -1,0 +1,10 @@
+{
+    "functions": {
+      "dist/index.js": {
+        "includeFiles": ["public/**"]
+      }
+    },
+    "rewrites": [
+      { "source": "/(.*)", "destination": "dist/index.js" }
+    ]
+  }

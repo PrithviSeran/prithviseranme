@@ -64,9 +64,8 @@ app.use((req, res, next) => {
   next();
 });
 
-export default async function runApp(
-  setup: (app: Express, server: Server) => Promise<void>,
-) {
+async function setupApp(app: Express) {
+  // Assuming registerRoutes mutates the 'app' and returns the 'server' instance
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -74,23 +73,22 @@ export default async function runApp(
     const message = err.message || "Internal Server Error";
 
     res.status(status).json({ message });
-    throw err;
+    // In a serverless environment, you usually don't throw inside the error handler
+    // but log it instead.
+    log(message, "error");
+    // throw err; // Remove or comment out this line
   });
+  
+  // NOTE: If setup (which was an argument to runApp) is crucial, you'll need to 
+  // ensure that logic is run here or exported separately.
+  
+  return app;
+}
 
-  // importantly run the final setup after setting up all the other routes so
-  // the catch-all route doesn't interfere with the other routes
-  await setup(app, server);
+// Export a promise that resolves to the fully configured app instance
+const configuredAppPromise = setupApp(app); 
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = parseInt(process.env.PORT || '8000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+export default async function handler(req: Request, res: Response) {
+    const configuredApp = await configuredAppPromise;
+    configuredApp(req, res);
 }
