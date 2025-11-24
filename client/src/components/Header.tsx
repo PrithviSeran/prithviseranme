@@ -44,15 +44,6 @@ export function Header() {
           >
             Projects
           </Link>
-          <Link
-            href="/blog"
-            className={`text-sm font-medium transition-colors ${
-              location === "/blog" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-            }`}
-            data-testid="link-blog"
-          >
-            Blog
-          </Link>
         </nav>
         
         <ThemeToggle />

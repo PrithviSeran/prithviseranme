@@ -1,42 +1,42 @@
 export const portfolioData = {
   // Personal Information
   personal: {
-    name: "Your Name",
-    email: "your.email@example.com",
-    title: "Developer & Creator",
+    name: "Prithvi Seran",
+    email: "prithviseran0@gmail.com",
+    title: "Engineer",
   },
 
   // Social Links
   social: {
-    twitter: "https://twitter.com/yourusername",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    scholar: "https://scholar.google.com/citations?user=yourid",
+    twitter: "https://x.com/PrithviSeran",
+    github: "https://github.com/PrithviSeran",
+    linkedin: "https://www.linkedin.com/in/prithvi-seran-029652218/",
+    // scholar: "https://scholar.google.com/citations?user=yourid",
   },
 
   // Bento Box Images
   bentoImages: [
     {
       id: "1",
-      src: "", // Add your image path here, e.g., "/images/photo1.jpg"
+      src: "../../public/me.jpeg", // Add your image path here, e.g., "/images/photo1.jpg"
       alt: "Image 1",
       size: "large", // large = 2x2 grid
     },
     {
       id: "2",
-      src: "", // Add your image path here
+      src: "../../public/superman.JPG", // Add your image path here
       alt: "Image 2",
       size: "wide", // wide = 2x1 grid
     },
     {
       id: "3",
-      src: "", // Add your image path here
+      src: "../../public/ramen.jpeg", // Add your image path here
       alt: "Image 3",
       size: "small", // small = 1x1 grid
     },
     {
       id: "4",
-      src: "", // Add your image path here
+      src: "../../public/cafe.jpg", // Add your image path here
       alt: "Image 4",
       size: "small", // small = 1x1 grid
     },
@@ -47,23 +47,18 @@ export const portfolioData = {
     {
       type: "intro",
       content: [
-        "I'm a researcher at [Your Institute](https://example.com) and [Partner Organization](https://example.com), working on interesting problems in your field of expertise.",
-        "I lead the [Your Team](https://example.com) team, where we develop innovative solutions. The team has grown to over 20 researchers and engineers advancing the frontier of your field.",
-        "My goal is to build [transformative technology](https://example.com); systems that push the boundaries of what's possible in your domain.",
+        "I'm currently an engineer at [Shopify](https://shopify.com), working on making commerce easier for everyone.",
+        "I also worked as a data scientist at Shopify, a machine learning engineer at [Rotman Commerce](https://rotmancommerce.com), and a researcher at the [Dynamic Optimization & Operations Management Lab](https://cglee.mie.utoronto.ca/research-lab/).",
+        "My goal is to build products and technologies that people love and can benefit from.",
       ],
     },
     {
       type: "section",
-      title: "On the Meaning of Life",
+      title: "Other than building...",
       content: [
-        "I often contemplate the meaning of life. Currently, I believe life is meaningless if the chain of intelligence breaks at anytime in the future. Conversely, I've found purpose in increasing the breadth and depth of intelligence such that it, in billions of years down the road, it can give rise to new universes and keep the chain going. I'm not sure if, when, or how my perspective might change.",
-      ],
-    },
-    {
-      type: "section",
-      title: "Community",
-      content: [
-        "Brief description of your involvement in the community, mentorship, or other activities you're passionate about.",
+        "I love combat sports. I myself train in kickboxing.",
+        "Music is a big part of my life, almost anything I do is accompanied by music playing in the background.",
+        "I am a big superhero/anime/comics/manga fan. The Absolute Batman comic run has been phenominal.",
       ],
     },
   ],
@@ -88,131 +83,138 @@ export const portfolioData = {
   experience: [
     {
       id: "1",
-      company: "Arc Institute",
-      role: "Bio AI Researcher",
-      period: "May 2025 - Present",
+      company: "Shopify",
+      role: "Software Engineering Intern",
+      period: "Sept 2025 - Present",
       description:
-        "Leading the BioReason team with Vector Institute to build reasoning foundation models that connect DNA, proteins, and disease pathways using reinforcement learning and multimodal biology.",
+        "Built and shipped backend services powering millions of daily requests, then jumped to the frontend to craft polished admin UIs. Spent my days juggling Ruby, GraphQL, Kafka, and React—and somehow made them all get along.",
     },
     {
       id: "2",
-      company: "Cohere",
-      role: "Machine Learning Engineer Intern",
-      period: "April 2025 - August 2025",
+      company: "Shopify",
+      role: "Data Science Intern",
+      period: "Jan 2025 - April 2025",
       description:
-        "Built large-scale synthetic data pipelines across 1,024 GPUs, boosting math reasoning in foundation models and integrating real-time monitoring with Kubernetes and Grafana.",
+        "Created end-to-end ML pipelines that trained themselves while I slept, wrangled huge datasets with BigQuery, and turned messy ETL processes into clean, automated DAGs. Also moonlighted as a dashboard wizard for Shopify’s data teams.",
     },
     {
       id: "3",
-      company: "INSERM",
-      role: "Machine Learning Researcher",
-      period: "July 2023 - September 2024",
+      company: "Rotman Commerce",
+      role: "Machine Learning Engineer",
+      period: "May 2025 - Present",
       description:
-        "First-authored CodonTransformer (Nature Communications), a model that optimizes DNA sequences for protein expression across 160+ species, now used by thousands of biologists worldwide.",
+        "Built a contract-analyzing brain using GraphRAG, LLMs, and a giant graph database. Got agents to read legal documents, extract the juicy parts, and map out relationships like it was detective work.",
     },
     {
       id: "4",
-      company: "University Health Network (UHN)",
-      role: "Health AI Researcher",
-      period: "September 2024 - Present",
+      company: "Dynamic Optimization & Operations Management Lab",
+      role: "Deep Reinforcement Learning Researcher",
+      period: "May 2025 - Aug 2025",
       description:
-        "Developing MedRAX, a medical reasoning agent for chest X-rays that combines vision-language models with clinical tools, open-sourced with 700+ stars and 1M+ views.",
+        "Created drone-training arenas where autonomous agents learned to chase, dodge, and outsmart each other. Mixed pathfinding algorithms with RL to build tiny airborne strategists.",
+    },
+    {
+      id: "5",
+      company: "Dynamic Optimization & Operations Management Lab",
+      role: "Research Assistant",
+      period: "Oct 2024 - May 2025",
+      description:
+        "Built ML pipelines that could predict patient treatments and recommend what comes next. Spent my time tuning one-class models, crafting LSTM architectures, and turning dentistry datasets into something actually usable.",
+    },
+    {
+      id: "6",
+      company: "aUToronto (SAE AutoDrive Challenge)",
+      role: "Mobility Innovations Lead",
+      period: "May 2024 - Present",
+      description:
+        "Led a team defending autonomous cars from adversarial attacks—basically teaching a self-driving vehicle how to not get tricked by bad actors. Mixed robotics, safety, and a lot of creative debugging.",
+    },
+    {
+      id: "7",
+      company: "UTAT (University of Toronto Aerospace Team)",
+      role: "Data Processing Developer",
+      period: "Jan 2024 - Oct 2024",
+      description:
+        "Used diffusion models and transformers to clean up noisy hyperspectral images from a CubeSat mission. Helped turn raw space data into something scientists could actually use, and published it at SmallSat.",
     },
   ],
+  
+  
 
   // Projects
   projects: [
     {
       id: "1",
-      title: "UnsearchableTO",
+      title: "What's Poppin",
       description:
-        "Made the city of Toronto searchable by building an embedding search engine over 50,000+ Street View images using Cohere embeddings and FastAPI with a PostgreSQL (pgvector) database. Reached 35,000+ views and 15,000+ searches within 48 hours of launch.",
-      technologies: ["Python", "Next.js", "FastAPI", "PostgreSQL", "Cohere API", "Vector DB"],
-    },
-    {
-      id: "2",
-      title: "SeaScript",
-      description:
-        "Created a Python game that turns MATLAB learning into an interactive underwater adventure. Built with Pygame, MongoDB, and MATLAB, and won Hack the 6ix 2024.",
-      technologies: ["Python", "MATLAB", "MongoDB", "Pygame"],
+        "Designed a nightlife app that feels like a personal party scout. Built the full stack, from ML-powered recommendations to a clean React Native interface, so people could find the perfect spot without endless scrolling.",
+      technologies: ["React Native", "PyTorch", "FastAPI", "Supabase", "Docker", "TypeScript"],
+      githubUrl: "https://github.com/PrithviSeran/whats-poppin",
+      liveUrl: "https://www.whatspoppin.info",
     },
     {
       id: "3",
-      title: "Vector Institute's Cyclops",
+      title: "GraphRAG Contract Analysis App @ Rotman Commerce",
       description:
-        "Contributed to Cyclops, a 100,000+ line open-source ML toolkit for healthcare research. Improved core TensorFlow and Scikit-learn pipelines and built new predictive modules for clinical datasets.",
-      technologies: ["TensorFlow", "Scikit-learn", "Pandas"],
+        "Built a contract-analyzing sidekick that uses graphs and LLM agents to break down dense legal documents. Wired up a graph database, a FastAPI engine, and a slick Next.js UI so professors could explore contracts like an interactive map.",
+      technologies: ["Python", "LangGraph", "Neo4j", "FastAPI", "Docker", "Next.js", "LLaMA"],
+      githubUrl: "https://github.com/PrithviSeran/ContRAG",
+      liveUrl: "https://cont-rag.vercel.app",
     },
     {
-      id: "4",
-      title: "Hugging Face Transformers",
+      id: "6",
+      title: "AI Digital Marketing Platform",
       description:
-        "Enhanced the Transformers library by integrating attention-hybrid Mamba2 models, improving sequence modeling performance for open-source NLP research.",
-      technologies: ["Python", "Transformers", "NLP"],
+        "Created a full-stack marketing assistant that writes emails, finds leads, and manages campaigns. Mixed scrapers, AI-powered writing, and live dashboards to make outreach feel less like a chore and more like magic.",
+      technologies: ["Django", "Llama3", "React.js", "PostgreSQL", "GCP"],
+      githubUrl: "https://github.com/PrithviSeran/AIDigitalMarketing",
+      liveUrl: null,
     },
     {
-      id: "5",
-      title: "N-Queens",
+      id: "7",
+      title: "TAAM Item Collection Management App",
       description:
-        "Designed a new hill-climbing algorithm with adaptive randomness to escape local optima, achieving a 97%+ success rate. Benchmarked against simulated annealing and random search approaches.",
-      technologies: ["Python", "Algorithms", "Optimization"],
+        "Led a small squad to build an app for a real museum, handling everything from scanning items to organizing collections. Wrote Java, wrangled Firebase, and treated clean architecture and testing like a sport.",
+      technologies: ["Java", "Firebase", "Mockito", "JUnit5", "XML", "Jira"],
+      githubUrl: "https://github.com/PrithviSeran/TAAM-Project",
+      liveUrl: null,
+    },
+    {
+      id: "8",
+      title: "DrawNote AI",
+      description:
+        "Built an iOS app that turns messy classroom sketches into tidy digital notes. Mixed SwiftUI with a PyTorch model running through Azure so hand-drawn arrows and circles magically become OneNote-ready diagrams.",
+      technologies: ["C#", "Azure", "PyTorch", "Swift", "XML"],
+      githubUrl: "https://github.com/PrithviSeran/DrawNoteAI",
+      liveUrl: null,
+    },
+    {
+      id: "9",
+      title: "Prince Financials",
+      description:
+        "Developed a Forex bot that watches markets and makes calls using sequence models. Automated the whole setup with Terraform so the bot could live in the cloud and trade without babysitting.",
+      technologies: ["Python", "GCP", "Terraform", "Swift", "Firebase"],
+      githubUrl: "https://github.com/PrithviSeran/Prince-Financials-Trading-Bot",
+      liveUrl: null,
     },
   ],
+  
+  
 
   // Publications
   publications: [
     {
       id: "1",
-      title: "Your First Paper Title: A Novel Approach to Something Important",
-      authors: "Your Name, Co-Author One, Co-Author Two",
-      venue: "Nature Communications",
+      title: "Beyond the Visible: Jointly Attending to Spectral and Spatial Dimensions with HSI-Diffusion for the FINCH Spacecraft",
+      authors: "UTAT's data processing team",
+      venue: "2024 SmallSat Conference",
       year: "2024",
-      link: "#",
-    },
-    {
-      id: "2",
-      title: "Another Significant Contribution to the Field",
-      authors: "Your Name, Collaborator A, Collaborator B, Collaborator C",
-      venue: "Conference on Important Topics (COIT)",
-      year: "2023",
-      link: "#",
-    },
-    {
-      id: "3",
-      title: "Research Paper on Innovative Methods",
-      authors: "Lead Author, Your Name, Other Authors",
-      venue: "Journal of Advanced Research",
-      year: "2023",
+      link: "https://arxiv.org/html/2406.10724v1",
     },
   ],
 
   // Blog Posts
-  blog: [
-    {
-      id: "1",
-      title: "Thoughts on AI Research and the Future",
-      date: "November 2024",
-      excerpt:
-        "Exploring the intersection of artificial intelligence and your specific domain, and what it means for the future of research.",
-      link: "#",
-    },
-    {
-      id: "2",
-      title: "Building in Public: Lessons Learned",
-      date: "October 2024",
-      excerpt:
-        "Reflections on open-sourcing projects and the importance of community-driven development in modern research.",
-      link: "#",
-    },
-    {
-      id: "3",
-      title: "The Path to Becoming a Researcher",
-      date: "September 2024",
-      excerpt:
-        "My journey from student to researcher, including challenges faced and advice for those starting their own path.",
-      link: "#",
-    },
-  ],
+  
 };
 
 export type PortfolioData = typeof portfolioData;

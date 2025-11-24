@@ -21,7 +21,6 @@ function Router() {
           <Route path="/experience" component={ExperiencePage} />
           <Route path="/projects" component={ProjectsPage} />
           <Route path="/publications" component={PublicationsPage} />
-          <Route path="/blog" component={BlogPage} />
           <Route component={NotFound} />
         </Switch>
       </main>
