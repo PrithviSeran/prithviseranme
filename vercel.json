@@ -1,7 +1,7 @@
 {
     "functions": {
       "dist/index.js": {
-        "includeFiles": ["public/**"]
+        "includeFiles": "public/**"
       }
     },
     "rewrites": [
