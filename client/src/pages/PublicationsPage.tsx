@@ -1,39 +1,8 @@
-interface Publication {
-  id: string;
-  title: string;
-  authors: string;
-  venue: string;
-  year: string;
-  link?: string;
-}
-
-const publications: Publication[] = [
-  {
-    id: "1",
-    title: "Your First Paper Title: A Novel Approach to Something Important",
-    authors: "Your Name, Co-Author One, Co-Author Two",
-    venue: "Nature Communications",
-    year: "2024",
-    link: "#"
-  },
-  {
-    id: "2",
-    title: "Another Significant Contribution to the Field",
-    authors: "Your Name, Collaborator A, Collaborator B, Collaborator C",
-    venue: "Conference on Important Topics (COIT)",
-    year: "2023",
-    link: "#"
-  },
-  {
-    id: "3",
-    title: "Research Paper on Innovative Methods",
-    authors: "Lead Author, Your Name, Other Authors",
-    venue: "Journal of Advanced Research",
-    year: "2023"
-  }
-];
+import { portfolioData } from "@/data/portfolio";
 
 export default function PublicationsPage() {
+  const { publications } = portfolioData;
+
   return (
     <div className="container max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold mb-12" data-testid="text-page-title">

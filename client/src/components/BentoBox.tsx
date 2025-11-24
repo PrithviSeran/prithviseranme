@@ -1,44 +1,42 @@
+import { portfolioData } from "@/data/portfolio";
+
 export function BentoBox() {
+  const { bentoImages } = portfolioData;
+  
+  const getSizeClasses = (size: string) => {
+    switch (size) {
+      case "large":
+        return "col-span-2 row-span-2 aspect-square";
+      case "wide":
+        return "col-span-2 row-span-1 aspect-[2/1]";
+      case "small":
+        return "col-span-1 row-span-1 aspect-square";
+      default:
+        return "col-span-1 row-span-1 aspect-square";
+    }
+  };
+
   return (
     <div className="grid grid-cols-4 gap-3 w-full mb-12">
-      {/* Large square - top left */}
-      <div 
-        className="col-span-2 row-span-2 rounded-lg bg-muted overflow-hidden aspect-square hover-elevate"
-        data-testid="bento-image-1"
-      >
-        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-          Image 1
+      {bentoImages.map((image) => (
+        <div
+          key={image.id}
+          className={`rounded-lg bg-muted overflow-hidden hover-elevate ${getSizeClasses(image.size)}`}
+          data-testid={`bento-image-${image.id}`}
+        >
+          {image.src ? (
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm">
+              {image.alt}
+            </div>
+          )}
         </div>
-      </div>
-      
-      {/* Small rectangle - top right */}
-      <div 
-        className="col-span-2 row-span-1 rounded-lg bg-muted overflow-hidden aspect-[2/1] hover-elevate"
-        data-testid="bento-image-2"
-      >
-        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-          Image 2
-        </div>
-      </div>
-      
-      {/* Two small squares - bottom right */}
-      <div 
-        className="col-span-1 row-span-1 rounded-lg bg-muted overflow-hidden aspect-square hover-elevate"
-        data-testid="bento-image-3"
-      >
-        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-          Image 3
-        </div>
-      </div>
-      
-      <div 
-        className="col-span-1 row-span-1 rounded-lg bg-muted overflow-hidden aspect-square hover-elevate"
-        data-testid="bento-image-4"
-      >
-        <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-          Image 4
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
